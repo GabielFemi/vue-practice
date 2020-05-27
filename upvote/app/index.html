@@ -17,7 +17,7 @@
         <h2 class="title has-text-centered dividing-header">Upvotes App</h2>
 
         <div class="section">
-            <article class="media">
+            <article v-for= "submission in submissions"class="media">
                 <figure class="media-left">
                     <img class="image is-64x64" src="../public/images/submissions/image-yellow.png">
                 </figure>
@@ -25,16 +25,16 @@
                     <div class="content">
                         <p><strong>
                             <a v-bind:href="submissions[0].url" class="has-text-info">
-                                {{ submissions[0].title }}
+                                {{ submission.title }}
                             </a>
-                                <span class="tag is-small">#{{ submissions[0].id }}</span>
+                                <span class="tag is-small">#{{ submission.id }}</span>
                             </strong>
                             <br>
-                            {{ submissions[0].description }}
+                            {{ submission.description }}
                             <br>
                             <small class="is-size-7">
                                 Submitted by:
-                                <img class="image is-24x24" v-bind:src="submissions[0].avatar">
+                                <img class="image is-24x24" v-bind:src="submission.avatar">
                             </small>
                         </p>
                     </div>
