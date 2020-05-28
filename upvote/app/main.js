@@ -31,7 +31,15 @@ const submissionComponent = {
                 </div>
                 </div>
             `,
-    props: ['submission', 'submissions']
+    props: ['submission', 'submissions'],
+    methods: {
+        upvote(submissionId) {
+            const submission = this.submissions.find(
+                submission => submission.id === submissionId
+            );
+            submission.votes++
+        }
+    }
 };
 
 
@@ -45,14 +53,6 @@ new Vue ({
             return this.submissions.sort((a,b) => {
                 return b.votes - a.votes
             })
-        }
-    },
-    methods: {
-        upvote(submissionId) {
-            const submission = this.submissions.find(
-                submission => submission.id === submissionId
-            );
-            submission.votes++
         }
     },
     components: {
