@@ -17,8 +17,8 @@
         <h2 class="title has-text-centered dividing-header">Upvotes App</h2>
 
         <div class="section">
-            <article v-for= "submission in sortedSubmissions" class="media" v-bind:class="{ 'blue-border': submission.votes >= 20}">
-                <submission-component v-bind:submission="submission" v-bind:submissions="sortedSubmissions"></submission-component>
+            <article v-for= "submission in sortedSubmissions" class="media" :class="{ 'blue-border': submission.votes >= 20}">
+                <submission-component :submission="submission" :submissions="sortedSubmissions"></submission-component>
             </article>
         </div>
     </div>
