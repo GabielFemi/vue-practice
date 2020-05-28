@@ -1,6 +1,7 @@
 const submissionComponent = {
     template:
     `
+                <div style="display: flex; width: 100%">
                 <figure class="media-left">
                     <img class="image is-64x64" v-bind:src="submission.submissionImage">
                 </figure>
@@ -27,6 +28,7 @@ const submissionComponent = {
                         <i class="fa fa-chevron-up"></i>
                         <strong class="has-text-info">{{ submission.votes }}</strong>
                     </span>
+                </div>
                 </div>
             `
 }
