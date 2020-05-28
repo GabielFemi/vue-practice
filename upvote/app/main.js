@@ -1,9 +1,9 @@
 const submissionComponent = {
     template:
     `
-                <div style="display: flex; width: 100%">
+          <div style="display: flex; width: 100%">
                 <figure class="media-left">
-                    <img class="image is-64x64" v-bind:src="submission.submissionImage">
+                    <img class="image is-64x64" :src="submission.submissionImage">
                 </figure>
                 <div class="media-content">
                     <div class="content">
