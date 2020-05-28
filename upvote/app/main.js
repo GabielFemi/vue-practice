@@ -30,8 +30,9 @@ const submissionComponent = {
                     </span>
                 </div>
                 </div>
-            `
-}
+            `,
+    props: ['submission', 'submissions']
+};
 
 
 new Vue ({
